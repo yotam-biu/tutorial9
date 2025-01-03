@@ -13,7 +13,7 @@ def test_model():
 
     df_test = pd.read_csv(".tests/penguins_test.csv")
     X = df_test[features]
-    y = df_test["status"] # categorial
+    y = df_test["sex"] # categorial
     model = joblib.load(path)
     prediction = model.predict(X)
     score = accuracy_score(y, prediction)
