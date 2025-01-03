@@ -12,6 +12,7 @@ def test_model():
     assert len(features) == 2
 
     df_test = pd.read_csv(".tests/penguins_test.csv")
+    df_test.dropna()
     X = df_test[features]
     y = df_test["sex"] # categorial
     model = joblib.load(path)
