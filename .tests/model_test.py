@@ -17,4 +17,4 @@ def test_model():
     model = joblib.load(path)
     prediction = model.predict(X)
     score = accuracy_score(y, prediction)
-    assert score > 0.75
+    assert score > 0.8
